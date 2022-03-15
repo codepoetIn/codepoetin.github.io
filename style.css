@@ -8,7 +8,7 @@ body {
   
   @font-face {
     font-family: dankmono;
-    src: url("./DankMono-Italic.otf");
+    src: url("DankMono-Italic.otf");
     font-display: swap;
   }
   
