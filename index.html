@@ -1,24 +1,443 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CodePoet | Think. Craft. Code - Full Stack Developer Portfolio</title>
-    <meta name="description" content="CodePoet - 15+ years expertise in full-stack development, e-commerce solutions, and AI/ML implementation. Specialized in React, Angular, Node.js, and modern web technologies." />
+    <title>
+      CodePoet | Think. Craft. Code - Full Stack Developer Portfolio
+    </title>
+    <meta
+      name="description"
+      content="CodePoet - 15+ years expertise in full-stack development, e-commerce solutions, and AI/ML implementation. Specialized in React, Angular, Node.js, and modern web technologies."
+    />
     <meta name="author" content="CodePoet" />
 
-    <meta property="og:title" content="CodePoet | Think. Craft. Code - Full Stack Developer Portfolio" />
-    <meta property="og:description" content="15+ years expertise in full-stack development, e-commerce solutions, and AI/ML implementation." />
+    <meta
+      property="og:title"
+      content="CodePoet | Think. Craft. Code - Full Stack Developer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="15+ years expertise in full-stack development, e-commerce solutions, and AI/ML implementation."
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
   </head>
+  <body class="bg-background text-foreground">
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-lg"
+    >
+      <div class="container mx-auto px-6">
+        <div class="flex h-16 items-center justify-between">
+          <a href="index.html" class="flex items-center gap-3 group">
+            <img
+              src="/src/assets/codepoet-logo-new.jpeg"
+              alt="CodePoet Logo"
+              class="h-14 w-14 rounded-full object-cover group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 hover:glow-effect"
+            />
+            <span
+              class="text-xl font-bold group-hover:text-primary transition-colors"
+              >CODE<span class="text-primary">POET</span></span
+            >
+          </a>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+          <div class="flex items-center gap-6">
+            <a href="index.html">
+              <button
+                class="px-4 py-2 font-medium rounded-md bg-primary text-primary-foreground hover:scale-110 transition-all duration-300"
+              >
+                Home
+              </button>
+            </a>
+            <a href="blog.html">
+              <button
+                class="px-4 py-2 font-medium rounded-md hover:bg-accent hover:text-accent-foreground hover:scale-110 transition-all duration-300"
+              >
+                Blog
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 z-0"
+        style="background-image: url('/src/assets/hero-bg.jpg'); background-size: cover; background-position: center;"
+      >
+        <div class="absolute inset-0 bg-background/90 backdrop-blur-sm"></div>
+      </div>
+
+      <div class="container relative z-10 px-6 py-32">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+          <div class="inline-block animate-slide-up">
+            <span
+              class="text-primary font-semibold text-sm tracking-wider uppercase animate-pulse"
+            >
+              Think. Craft. Code
+            </span>
+          </div>
+
+          <h1
+            class="text-5xl md:text-7xl font-bold leading-tight animate-slide-up"
+            style="animation-delay: 0.2s"
+          >
+            Building Digital
+            <span
+              class="text-primary block animate-slide-in-right"
+              style="animation-delay: 0.4s"
+              >Experiences</span
+            >
+          </h1>
+
+          <p
+            class="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed animate-slide-up"
+            style="animation-delay: 0.6s"
+          >
+            15+ years of expertise in crafting scalable web applications,
+            e-commerce solutions, and cutting-edge AI/ML implementations.
+            Specialized in full-stack development with a passion for innovation
+            and beautiful UI design.
+          </p>
+
+          <div
+            class="flex flex-wrap items-center justify-center gap-4 pt-4 animate-slide-up"
+            style="animation-delay: 0.8s"
+          >
+            <button
+              class="px-6 py-3 bg-primary text-primary-foreground rounded-md font-medium group hover:scale-110 transition-all duration-300"
+            >
+              View My Work
+              <svg
+                class="inline ml-2 h-4 w-4 transition-transform group-hover:translate-x-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </button>
+            <button
+              class="px-6 py-3 bg-secondary text-secondary-foreground rounded-md font-medium hover:scale-110 transition-all duration-300"
+            >
+              Contact Me
+            </button>
+          </div>
+
+          <div
+            class="flex items-center justify-center gap-4 pt-8 animate-slide-up"
+            style="animation-delay: 1s"
+          >
+            <button
+              class="p-2 rounded-md hover:text-primary hover:scale-125 hover:rotate-12 transition-all duration-300"
+            >
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                />
+              </svg>
+            </button>
+            <button
+              class="p-2 rounded-md hover:text-primary hover:scale-125 hover:rotate-12 transition-all duration-300"
+            >
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                />
+              </svg>
+            </button>
+            <button
+              class="p-2 rounded-md hover:text-primary hover:scale-125 hover:rotate-12 transition-all duration-300"
+            >
+              <svg
+                class="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"
+      ></div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-24 px-6">
+      <div class="container mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4">
+            Tech <span class="text-gradient">Stack</span>
+          </h2>
+          <p class="text-muted-foreground text-lg max-w-2xl mx-auto">
+            A comprehensive toolkit honed over 15 years of building world-class
+            applications
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto"
+          id="skills-grid"
+        ></div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="py-24 px-6 bg-secondary/30">
+      <div class="container mx-auto max-w-4xl">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold mb-4">
+            Professional <span class="text-gradient">Journey</span>
+          </h2>
+          <p class="text-muted-foreground text-lg">
+            Building innovative solutions across industries
+          </p>
+        </div>
+
+        <div class="space-y-8">
+          <!-- Experience cards will be inserted here -->
+          <div
+            class="rounded-lg border border-border bg-card text-card-foreground shadow-sm border-l-4 border-l-primary hover:border-l-8 transition-all duration-300 hover:glow-effect animate-slide-in-left"
+          >
+            <div class="p-6">
+              <div class="flex items-start gap-4">
+                <div
+                  class="p-3 rounded-lg bg-primary/10 text-primary animate-float"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-start justify-between mb-2">
+                    <div>
+                      <h3 class="text-xl font-semibold">
+                        Full Stack Developer
+                      </h3>
+                      <p class="text-muted-foreground">Various Companies</p>
+                    </div>
+                    <span
+                      class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors text-foreground"
+                      >15 Years</span
+                    >
+                  </div>
+                  <p class="text-muted-foreground mt-4 leading-relaxed">
+                    Comprehensive experience in building scalable web
+                    applications, mobile solutions, and enterprise systems.
+                    Proficient in both frontend and backend technologies with a
+                    focus on delivering high-quality, maintainable code.
+                  </p>
+                  <div class="flex flex-wrap gap-2 mt-4">
+                    <span
+                      class="inline-flex items-center rounded-full border-transparent bg-primary text-primary-foreground px-2.5 py-0.5 text-xs font-semibold"
+                      >HTML 5</span
+                    >
+                    <span
+                      class="inline-flex items-center rounded-full border-transparent bg-primary text-primary-foreground px-2.5 py-0.5 text-xs font-semibold"
+                      >Angular</span
+                    >
+                    <span
+                      class="inline-flex items-center rounded-full border-transparent bg-primary text-primary-foreground px-2.5 py-0.5 text-xs font-semibold"
+                      >React</span
+                    >
+                    <span
+                      class="inline-flex items-center rounded-full border-transparent bg-primary text-primary-foreground px-2.5 py-0.5 text-xs font-semibold"
+                      >Node.js</span
+                    >
+                    <span
+                      class="inline-flex items-center rounded-full border-transparent bg-primary text-primary-foreground px-2.5 py-0.5 text-xs font-semibold"
+                      >TypeScript</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="rounded-lg border border-border bg-card text-card-foreground shadow-sm border-l-4 border-l-accent hover:border-l-8 transition-all duration-300 hover:glow-effect animate-slide-in-left"
+            style="animation-delay: 0.2s"
+          >
+            <div class="p-6">
+              <div class="flex items-start gap-4">
+                <div
+                  class="p-3 rounded-lg bg-accent/10 text-accent animate-float"
+                  style="animation-delay: 0.5s"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-start justify-between mb-2">
+                    <div>
+                      <h3 class="text-xl font-semibold">
+                        E-commerce Specialist
+                      </h3>
+                      <p class="text-muted-foreground">E-commerce Solutions</p>
+                    </div>
+                    <span
+                      class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors text-foreground"
+                      >10 Years</span
+                    >
+                  </div>
+                  <p class="text-muted-foreground mt-4 leading-relaxed">
+                    Specialized in developing robust e-commerce platforms using
+                    WordPress, Drupal, Magento, and SAP Commerce Cloud.
+                    Expertise in Composable Storefront, payment gateway
+                    integration, inventory management, and creating seamless
+                    shopping experiences.
+                  </p>
+                  <div class="flex flex-wrap gap-2 mt-4">
+                    <span
+                      class="inline-flex items-center rounded-full border-transparent bg-primary text-primary-foreground px-2.5 py-0.5 text-xs font-semibold"
+                      >WordPress</span
+                    >
+                    <span
+                      class="inline-flex items-center rounded-full border-transparent bg-primary text-primary-foreground px-2.5 py-0.5 text-xs font-semibold"
+                      >Magento</span
+                    >
+                    <span
+                      class="inline-flex items-center rounded-full border-transparent bg-primary text-primary-foreground px-2.5 py-0.5 text-xs font-semibold"
+                      >Drupal</span
+                    >
+                    <span
+                      class="inline-flex items-center rounded-full border-transparent bg-primary text-primary-foreground px-2.5 py-0.5 text-xs font-semibold"
+                      >SAP Commerce</span
+                    >
+                    <span
+                      class="inline-flex items-center rounded-full border-transparent bg-primary text-primary-foreground px-2.5 py-0.5 text-xs font-semibold"
+                      >Composable Storefront</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="rounded-lg border border-border bg-card text-card-foreground shadow-sm border-l-4 border-l-primary hover:border-l-8 transition-all duration-300 hover:glow-effect animate-slide-in-left"
+            style="animation-delay: 0.4s"
+          >
+            <div class="p-6">
+              <div class="flex items-start gap-4">
+                <div
+                  class="p-3 rounded-lg bg-primary/10 text-primary animate-float"
+                  style="animation-delay: 1s"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-start justify-between mb-2">
+                    <div>
+                      <h3 class="text-xl font-semibold">AI/ML Engineer</h3>
+                      <p class="text-muted-foreground">Emerging Technologies</p>
+                    </div>
+                    <span
+                      class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors text-foreground"
+                      >Current</span
+                    >
+                  </div>
+                  <p class="text-muted-foreground mt-4 leading-relaxed">
+                    Working with cutting-edge AI and machine learning
+                    technologies. Implementing solutions using Azure AI Foundry,
+                    LangChain, MCP Servers, and various agentic frameworks to
+                    solve complex business problems. Experienced in
+                    demonstrating AI integrations across enterprise platforms.
+                  </p>
+                  <div class="flex flex-wrap gap-2 mt-4">
+                    <span
+                      class="inline-flex items-center rounded-full border-transparent bg-primary text-primary-foreground px-2.5 py-0.5 text-xs font-semibold"
+                      >Azure AI</span
+                    >
+                    <span
+                      class="inline-flex items-center rounded-full border-transparent bg-primary text-primary-foreground px-2.5 py-0.5 text-xs font-semibold"
+                      >LangChain</span
+                    >
+                    <span
+                      class="inline-flex items-center rounded-full border-transparent bg-primary text-primary-foreground px-2.5 py-0.5 text-xs font-semibold"
+                      >Autogen</span
+                    >
+                    <span
+                      class="inline-flex items-center rounded-full border-transparent bg-primary text-primary-foreground px-2.5 py-0.5 text-xs font-semibold"
+                      >N8N</span
+                    >
+                    <span
+                      class="inline-flex items-center rounded-full border-transparent bg-primary text-primary-foreground px-2.5 py-0.5 text-xs font-semibold"
+                      >MCP Servers</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-border py-8 px-6">
+      <div class="container mx-auto text-center text-muted-foreground">
+        <p>&copy; <span id="year"></span> CodePoet. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
