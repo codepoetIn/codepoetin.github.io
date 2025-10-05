@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | CodePoet - Tech Insights & Tutorials</title>
+    <meta name="description" content="Insights, tutorials, and thoughts on full-stack development, AI/ML, and building scalable web applications">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-background text-foreground min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/80 backdrop-blur-lg">
+        <div class="container mx-auto px-6">
+            <div class="flex h-16 items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="../src/assets/codepoet-logo.jpeg" alt="CodePoet Logo" class="h-10 w-10 rounded-full object-cover group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 hover:glow-effect">
+                    <span class="text-xl font-bold group-hover:text-primary transition-colors">CODE<span class="text-primary">POET</span></span>
+                </a>
+                
+                <div class="flex items-center gap-6">
+                    <a href="index.html">
+                        <button class="px-4 py-2 font-medium rounded-md hover:bg-accent hover:text-accent-foreground hover:scale-110 transition-all duration-300">
+                            Home
+                        </button>
+                    </a>
+                    <a href="blog.html">
+                        <button class="px-4 py-2 font-medium rounded-md bg-primary text-primary-foreground hover:scale-110 transition-all duration-300">
+                            Blog
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-16 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <h1 class="text-5xl font-bold mb-4">
+                    Tech <span class="text-gradient">Blog</span>
+                </h1>
+                <p class="text-xl text-muted-foreground max-w-2xl mx-auto">
+                    Insights, tutorials, and thoughts on full-stack development, 
+                    AI/ML, and building scalable web applications
+                </p>
+            </div>
+
+            <!-- Blog Posts Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="blog-grid"></div>
+
+            <!-- Load More -->
+            <div class="text-center mt-12">
+                <button class="px-6 py-3 bg-transparent border border-input rounded-md font-medium hover:bg-accent hover:text-accent-foreground transition-colors">
+                    Load More Articles
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="blog-script.js"></script>
+</body>
+</html>
